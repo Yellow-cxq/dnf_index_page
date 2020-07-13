@@ -226,3 +226,23 @@ function toggleNews(){
 		}
 	}
 }
+
+//活动中心Tab切换
+function toggleActivity(){
+	var lis = document.querySelectorAll("#act_nav>li")
+	var actPanels = document.querySelectorAll("#act_con .act-panel")
+	for(let i = 0; i < lis.length; i++){
+		lis[i].index = i
+		actPanels[i].index = i
+		lis[i].onclick = function () {
+			for(let i = 0; i < lis.length; i++){
+				lis[i].classList.remove('cur')
+			}
+			for(let i = 0; i < actPanels.length; i++){
+				actPanels[i].style.display = 'none'
+			}
+			lis[this.index].classList.add('cur')
+			actPanels[this.index].style.display = 'block'
+		}
+	}
+}

@@ -1041,7 +1041,7 @@ ul,ol,s{
 	display: block;
 }
 .icon-push{
-	display: block;
+	display: none;
 	width: 100%;
 	height: 11px;
 	position: absolute;
@@ -1050,23 +1050,23 @@ ul,ol,s{
 	background-position: -299px 0;
 }
 .news-hd li em{
-	    background-color: #ec4828;
-	    display: block;
-	    position: absolute;
-	    right: 10px;
-	    top: 20px;
-	    font-size: 9px;
-	    border-radius: 50%;
-	    width: 15px;
-	    height: 15px;
-	    text-align: center;
-	    line-height: 15px;
-	    transform: scale(.9);
-	    -ms-transform: scale(.9);
-	    -moz-transform: scale(.9);
-	    -webkit-transform: scale(.9);
-	    -o-transform: scale(.9);
-	    color: #fff;
+	background-color: #ec4828;
+	display: block;
+	position: absolute;
+	right: 10px;
+	top: 20px;
+	font-size: 9px;
+	border-radius: 50%;
+	width: 15px;
+	height: 15px;
+	text-align: center;
+	line-height: 15px;
+	transform: scale(.9);
+	-ms-transform: scale(.9);
+	-moz-transform: scale(.9);
+	-webkit-transform: scale(.9);
+	-o-transform: scale(.9);
+	color: #fff;
 }
 .news-bd{
 	margin: 0 30px;
@@ -1133,6 +1133,361 @@ ul,ol,s{
 }
 #news-tab > .news-bd > .tab-panel{
 	display: block;
+}
+/* 活动中心样式 */
+.mode-2{
+	margin-top: 40px;
+	height: 440px;
+}
+.act{
+	position: relative;
+}
+.title{
+	color: #49657a;
+	font-size: 24px;
+	padding: 29px 0 20px 25px;
+	position: relative;
+}
+.act_btn_more{
+	position: absolute;
+	right: 20px;
+	top: 33px;
+}
+.act_btn_more a{
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px transparent;
+	position: relative;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-property: transform;
+	transition-property: transform;
+}
+.act_btn_more a:before{
+	pointer-events: none;
+	position: absolute;
+	z-index: -1;
+	content: '';
+	top: 100%;
+	left: 5%;
+	height: 10px;
+	width: 90%;
+	opacity: 0;
+	background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, transparent 80%);
+	background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, transparent 80%);
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-property: transform, opacity;
+	transition-property: transform, opacity;
+}
+.icon-xy{
+	width: 77px;
+	height: 28px;
+	background-position: -402px 0;
+	overflow: hidden;
+	text-indent: -999px;
+}
+.icon-actCenter{
+	border: 2px solid #ffffff;
+	width: 90px;
+	height: 24px;
+	text-align: center;
+	line-height: 24px;
+	color: #ec4828;
+	font-size: 14px;
+	border-radius: 15px;
+	margin-left: 10px;
+	
+}
+.act_btn_more a:hover{
+	-webkit-transform: translateY(-5px);
+	transform: translateY(-5px);
+}
+.act_btn_more a:hover::before{
+	opacity: 1;
+	-webkit-transform: translateY(5px);
+	transform: translateY(5px);
+}
+.act_con{
+	width: 100%;
+	position: relative;
+}
+.act-hd{
+	border-top: 1px solid #e3e3e3;
+}
+.act-hd li{
+	display: inline-block;
+	padding: 25px 0 17px 0;
+	cursor: pointer;
+	position: relative;
+	width: 19%;
+	text-align: center;
+	font-size: 0;
+}
+.act-hd li.cur a{
+	color: #EC4828;
+}
+.act-hd li a{
+	color: #555555;
+	font-size: 17px;
+	font-weight: bold;
+}
+.act-hd li.cur .icon-push{
+	display: block;
+}
+.act-hd .icon-push{
+	width: 81px;
+	height: 11px;
+	position: absolute;
+	left: 50%;
+	top: -4px;
+	background-position: -299px 0;
+	display: none;
+	margin-left: -40px;
+}
+/* 右上角那个数字，用来显示有几个 */
+.act-hd li em{
+	background-color: #ec4828;
+	position: absolute;
+	right: 15px;
+	top: 20px;
+	font-size: 9px;
+	border-radius: 50%;
+	width: 15px;
+	height: 15px;
+	text-align: center;
+	line-height: 15px;
+	transform: scale(.9);
+	-ms-transform: scale(.9);
+	-moz-transform: scale(.9);
+	-webkit-transform: scale(.9);
+	-o-transform: scale(.9);
+	color: #fff;
+	display: none;
+}
+.act-bd{
+	position: relative;
+}
+.act-list-title{
+	height: 42px;
+	line-height: 42px;
+	background-color: #f9f9f9;
+	color: #555555;
+	font-size: 14px;
+	margin: 13px 0;
+}
+.act-list-title span{
+	display: inline-block;
+	width: 25%;
+	text-align: center;
+	font-weight: bold;
+}
+.act-panel{
+	height: 205px;
+	width: 100%;
+	overflow: hidden;
+	position: absolute;
+}
+.act-panel .swiper-container{
+	width: 100%;
+	height: 100%;
+}
+.swiper-container{
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	list-style: none;
+	padding: 0;
+	z-index: 1;
+}
+.swiper-container-free-mode>.swiper-wrapper{
+	-webkit-transition-timing-function: ease-out;
+	-o-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+	margin: 0 auto;
+}
+.swiper-container-vertical>.swiper-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    -o-transition-property: transform;
+    transition-property: transform;
+    transition-property: transform,-webkit-transform;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.act-panel .swiper-slide {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    height: auto;
+}
+.swiper-slide {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    -o-transition-property: transform;
+    transition-property: transform;
+    transition-property: transform,-webkit-transform;
+}
+.act-list li{
+	height: 42px;
+	line-height: 42px;
+	text-align: center;
+	width: 100%;
+	border-bottom: 1px dashed #cecece;
+	font-size: 14px;
+	color: #555555;
+}
+.act-list li p{
+	display: block;
+	width: 25%;
+	float: left;
+}
+.actName{
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.act-list li p a{
+	color: #555;
+}
+.act-list li p a:hover{
+	color: #EC4828;
+}
+img{
+	border: 0;
+}
+.act-list li img{
+	vertical-align: middle;
+	width: auto;
+	height: 30px;
+}
+.act-list li p span{
+	color: #EC4828;
+}
+.act-list li p a{
+	color: #555;
+}
+.icon-get{
+	display: inline-block;
+	width: 55px;
+	height: 25px;
+	background-position: -486px 0;
+	vertical-align: middle;
+}
+.swiper-container-vertical>.swiper-scrollbar {
+    position: absolute;
+    right: 3px;
+    top: 1%;
+    z-index: 50;
+    width: 5px;
+    height: 98%;
+}
+.swiper-scrollbar {
+    background-color: #e3e3e3;
+}
+.swiper-scrollbar {
+    border-radius: 10px;
+    position: relative;
+    -ms-touch-action: none;
+    background: rgba(0,0,0,.1);
+}
+.swiper-scrollbar-drag {
+    background: #c9c9c9;
+}
+.swiper-scrollbar-drag {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background: rgba(0,0,0,.5);
+    border-radius: 10px;
+    left: 0;
+    top: 0;
+}
+.swiper-container .swiper-notification {
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    opacity: 0;
+    z-index: -1000;
+}
+.act-hot .title{
+	padding: 29px 0 20px 55px;
+}
+.act-hot-list{
+	margin: 0 0 0 35px;
+}
+.act-hot-list li{
+	width: 412px;
+	height: 160px;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+.act-hot-list li img{
+    display: block;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+.act-hot-list li img:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.bg1{
+	height: 445px;
+	background-color: #f0f0f0;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 843px;
+}
+.bg2{
+	width: 408px;
+	height: 599px;
+	background: url(images/bg2.png) no-repeat 0 0;
+	position: absolute;
+	left: 50%;
+	top: 755px;
+	margin-left: 644px;
+}
+.bg3{
+	width: 265px;
+	height: 356px;
+	background: url(images/bg3.png) no-repeat 0 0;
+	position: absolute;
+	left: 50%;
+	top: 1742px;
+	margin-left: 540px;
+	z-index: 1;
 }
 /* 清除浮动 */
 .clear-fix::after{
